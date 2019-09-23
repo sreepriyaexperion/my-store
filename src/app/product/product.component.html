@@ -1,11 +1,12 @@
 <div class="card">
-    <img src="https://www.newbridgesilverware.com/Images/Models/Full/5042.Jpg" class="card-img-top">
+    <img [src]="product.imageUrl" class="card-img-top">
+
     <div class="card-body">
-        <h5 class="card-title">pen</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{ product.title | uppercase }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <a href="#" *ngIf="product.isAvailable" class="btn btn-primary bg-success text-white" (click)="addToCart()">Add to Carts</a>
+        <a href="#" class="btn btn-primary pull-right bg-success text-white">More details</a>
+
     </div>
 </div>
 

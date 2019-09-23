@@ -2,13 +2,11 @@
 <div class="container wrapper">
   <app-search></app-search>
   <div class="row wrapper">
-    <app-product class="col-4"></app-product>
-    <app-product class="col-4"></app-product>
-    <app-product class="col-4"></app-product>
-    <app-product class="col-4"></app-product>
-    <app-product class="col-4"></app-product>
-    <app-product class="col-4"></app-product>
+    <app-product *ngFor="let item of productArray" class="col-4"[productProperty]="item"></app-product>
+    
   </div>
 </div>
+<p>{{productArray | json }}
+</p>
   <app-footer></app-footer>
 
