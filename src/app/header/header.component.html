@@ -8,12 +8,17 @@
 
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Product <span class="sr-only">(current)</span></a>
+            <li class="nav-item" routerLinkActive="active" exact="true">
+                <a class="nav-link" routerLink="addProduct">Add Product <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Check out</a>
+            <li class="nav-item" routerLinkActive="active" exact="true">
+                <a class="nav-link" routerLink="product">Product <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" exact="true">
+                <a class="nav-link " routerLink="checkout">Check out</a>
             </li>
         </ul>
+        <a class="btn btn-primary pull-right  text-white" style="background-color: #c90080
+        " href="#"><img src="assets/image/cart.svg" width="20px" height="20px">Cart</a>
     </div>
 </nav>

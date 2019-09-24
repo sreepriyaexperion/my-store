@@ -5,3 +5,6 @@
     width:50px;
     height: 40px;
 }
+.active a{
+    color:white !important;
+}

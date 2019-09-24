@@ -4,8 +4,8 @@
     <div class="card-body">
         <h5 class="card-title">{{ product.title | uppercase }}</h5>
         <p class="card-text">{{ product.description }}</p>
-        <a href="#" *ngIf="product.isAvailable" class="btn btn-primary bg-success text-white" (click)="addToCart()">Add to Carts</a>
-        <a href="#" class="btn btn-primary pull-right bg-success text-white">More details</a>
+        <a *ngIf="product.isAvailable" class="btn btn-primary bg-success text-white" (click)="addToCart()">Add to Carts</a>
+        <a (click)="goToDetails(product.id)" class="btn btn-primary pull-right bg-success text-white">More details</a>
 
     </div>
 </div>

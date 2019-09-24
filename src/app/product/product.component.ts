@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -8,9 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductComponent implements OnInit {
   // tslint:disable-next-line: no-input-rename
   @Input('productProperty') product;
-  constructor() {}
+  constructor(private router: Router) {}
   addToCart() {
-    console.log('click');
+    alert('add to cart');
+  }
+  goToDetails(productId) {
+    this.router.navigate(['product', productId]);
   }
   ngOnInit() {
   }

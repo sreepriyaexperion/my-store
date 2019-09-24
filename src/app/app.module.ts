@@ -9,6 +9,10 @@ import { SearchComponent } from './search/search.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     SearchComponent,
     ProductComponent,
-    FooterComponent
+    FooterComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
+    CheckOutComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

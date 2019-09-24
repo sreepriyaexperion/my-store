@@ -1,0 +1,10 @@
+<div class="card col-4" *ngIf="productObject">
+        <img [src]="productObject.imageUrl" class="card-img-top">
+    
+        <div class="card-body">
+            <h5 class="card-title">{{productObject.title | uppercase}}</h5>
+            <p class="card-text">{{productObject.description}}</p>
+            <a *ngIf="productObject.isAvailable" class="btn btn-primary bg-success text-white" (click)="addToCart()">Add to Cart</a>
+    
+        </div>
+    </div>

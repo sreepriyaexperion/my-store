@@ -8,6 +8,7 @@ import { Products } from '../models/products';
   providedIn: 'root'
 })
 export class ProductService {
+  private baseUrl = 'http://localhost:3000/';
   // product: Products[] = [
   //   {
   //     productName : `pen`,
@@ -33,6 +34,10 @@ export class ProductService {
   ) { }
   getProduct() {
     return this.httpClient.get('http://localhost:3000/product');
+
+  }
+  getProducts(productId) {
+    return this.httpClient.get(this.baseUrl + 'product/' + productId);
 
   }
 }
